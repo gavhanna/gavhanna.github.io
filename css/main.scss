@@ -1,0 +1,56 @@
+@import '_normalize';
+body {
+  font-family: 'Poiret One', cursive;
+  background-color: #FCFBE3;
+  font-size: 16px;
+}
+.link  {
+  color: #b22222;
+  &:hover {
+    color: lighten(#b22222, 30%);
+    text-decoration: none;
+  }
+}
+.content {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 90%;
+  margin: 0 auto;
+  h1 {
+    font-size: 70px;
+    font-weight: bolder;
+  }
+  h4 {
+    position: relative;
+    font-weight: bolder;
+    top: -55px;
+    left: -50px;
+  }
+  i {
+    color: #ffff00;
+    font-size: 99px;
+    position: relative;
+    top: 81px;
+    left: -15px;
+  }
+  .alan {
+    position: relative;
+    top: -25px;
+    left: -30px;
+  }
+  .weather {
+    position: relative;
+    top: 242px;
+    right: -120px;
+  }
+
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 2%;
+  text-align: center;
+  width: 100%;
+}
