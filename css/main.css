@@ -366,6 +366,13 @@ body, .content {
   align-self: flex-end;
   order: 5; }
 
+.gary {
+  align-self: flex-end; }
+
+.tba {
+  align-self: baseline;
+  order: 4; }
+
 .footer {
   align-self: center;
   margin-top: auto; }
@@ -405,14 +412,14 @@ body {
   width: 90%;
   margin-top: auto;
   align-self: center; }
-  .content .alan, .content .weather {
+  .content .alan, .content .weather, .content .gary {
     font-size: 20px; }
 
 @media screen and (min-width: 600px) {
   .content {
     max-width: 800px;
     font-size: 30px; }
-    .content .alan, .content .weather {
+    .content .alan, .content .weather, .content .gary {
       font-size: 25px; }
 
   .footer {
