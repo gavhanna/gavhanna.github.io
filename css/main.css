@@ -353,36 +353,80 @@ td,
 th {
   padding: 0; }
 
+/* Flexin'---------*/
 body, .content {
+  font-size: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
-.alan {
-  align-self: flex-start; }
+.content button {
+  border: 0px;
+  transition: all .5s; }
+  .content button:hover {
+    background-color: black;
+    color: salmon; }
 
-.weather {
-  align-self: flex-end;
-  order: 5; }
+.sites {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.alan {
+  position: absolute;
+  top: -40px;
+  display: none; }
 
 .gary {
-  align-self: flex-end; }
+  position: absolute;
+  left: 80px;
+  top: 10px;
+  display: none; }
 
-.tba {
-  align-self: baseline;
-  order: 4; }
+.apps {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+.weather {
+  position: absolute;
+  bottom: 10px;
+  right: 150px;
+  display: none; }
+
+.wiki-viewer {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  display: none; }
 
 .footer {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
   align-self: center;
   margin-top: auto; }
 
+/*-----------------*/
 .logo {
   min-height: 200px;
   margin-top: -75px;
   padding: 0px; }
   .logo h1 {
-    font-size: 70px;
+    font-size: 75px;
     font-weight: bolder; }
   .logo h4 {
     position: relative;
@@ -403,7 +447,9 @@ body {
   min-height: 100vh; }
 
 .link {
-  color: #b22222; }
+  color: #b22222;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
   .link:hover {
     color: #e88585;
     text-decoration: none; }
@@ -411,6 +457,8 @@ body {
 .content {
   width: 90%;
   margin-top: auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
   align-self: center; }
   .content .alan, .content .weather, .content .gary {
     font-size: 20px; }
