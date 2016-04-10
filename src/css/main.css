@@ -1,3 +1,95 @@
+.pikabu-viewport {
+  position: relative;
+  overflow: hidden; }
+
+html:not(.pikabu--is-legacy-android) .pikabu-viewport {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.pikabu-sidebar {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  overflow: auto; }
+
+.pikabu-sidebar--right {
+  right: 0;
+  z-index: 0;
+  width: 80%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.pikabu-sidebar--left {
+  width: 80%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.pikabu-container {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  overflow-x: hidden; }
+
+html:not(.pikabu--is-legacy-android) .pikabu-container {
+  -webkit-backface-visibility: hidden; }
+
+.pikabu--left-sidebar-visible .pikabu-container {
+  -webkit-transform: translate3d(80%, 0, 0);
+  -moz-transform: translate3d(80%, 0, 0);
+  -ms-transform: translate3d(80%, 0, 0);
+  -o-transform: translate3d(80%, 0, 0);
+  transform: translate3d(80%, 0, 0); }
+
+.pikabu--right-sidebar-visible .pikabu-container {
+  -webkit-transform: translate3d(-80%, 0, 0);
+  -moz-transform: translate3d(-80%, 0, 0);
+  -ms-transform: translate3d(-80%, 0, 0);
+  -o-transform: translate3d(-80%, 0, 0);
+  transform: translate3d(-80%, 0, 0); }
+
+.pikabu-container,
+.pikabu-sidebar {
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in; }
+
+.pikabu-overlay {
+  display: none; }
+
+.pikabu--left-sidebar-visible .pikabu-overlay, .pikabu--right-sidebar-visible .pikabu-overlay {
+  position: absolute;
+  top: 0;
+  z-index: 30;
+  display: block;
+  width: 100%;
+  cursor: pointer; }
+
+.pikabu-sidebar--is-hidden {
+  display: none; }
+
+.pikabu--has-overflow-touch {
+  -webkit-overflow-scrolling: touch; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -353,133 +445,111 @@ td,
 th {
   padding: 0; }
 
-/* Flexin'---------*/
-body, .content {
-  font-size: 30px;
+body {
+  font-family: "Josefin Sans", sans-serif; }
+
+/*==========================
+Center page content
+==========================*/
+.pikabu-container {
+  background: #FCFBE3;
+  min-height: 100vh;
+  max-width: 960px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  margin: auto;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  flex-direction: column; }
 
-.content button {
-  border: 0px;
-  transition: all .5s; }
-  .content button:hover {
-    background-color: black;
-    color: salmon; }
+header {
+  font-size: 20px; }
+  header a.pikabu-nav-toggle {
+    z-index: 10;
+    padding: 10px;
+    transition: all .2s;
+    border-radius: 2px; }
+  header a.pikabu-nav-toggle.right {
+    position: absolute;
+    right: 0px; }
+    header a.pikabu-nav-toggle.right i {
+      opacity: 0.7; }
+    header a.pikabu-nav-toggle.right:hover {
+      background-color: skyblue;
+      color: white; }
+  header a.pikabu-nav-toggle.left {
+    position: absolute;
+    left: 0px; }
+    header a.pikabu-nav-toggle.left i {
+      opacity: 0.7; }
+    header a.pikabu-nav-toggle.left:hover {
+      background-color: #ff7961;
+      color: white; }
 
-.sites {
-  position: absolute;
-  left: 0;
-  top: 0; }
-
-.alan {
-  position: absolute;
-  top: -40px;
-  display: none; }
-
-.gary {
-  position: absolute;
-  left: 80px;
-  top: 10px;
-  display: none; }
-
-.apps {
-  position: absolute;
-  bottom: 0;
-  right: 0; }
-
-.weather {
-  position: absolute;
-  bottom: 10px;
-  right: 150px;
-  display: none; }
-
-.wiki-viewer {
-  position: absolute;
-  bottom: -40px;
-  right: 0;
-  display: none; }
-
-.footer {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin-top: auto; }
-
-/*-----------------*/
 .logo {
-  min-height: 200px;
-  margin-top: -75px;
-  padding: 0px; }
+  font-family: "Poiret One", sans-serif;
+  align-self: center;
+  margin: auto;
+  width: 359px;
+  position: relative; }
   .logo h1 {
-    font-size: 75px;
-    font-weight: bolder; }
+    font-size: 82px;
+    position: absolute;
+    top: -136px; }
   .logo h4 {
-    position: relative;
-    font-weight: bolder;
-    top: -55px;
-    left: -50px; }
+    position: absolute;
+    top: -15px;
+    left: 46px; }
   .logo i {
     color: #ffff00;
-    font-size: 99px;
-    position: relative;
-    top: 81px;
-    left: 80px; }
+    font-size: 120px;
+    position: absolute;
+    top: -165px;
+    right: 41px; }
 
-body {
-  font-family: 'Poiret One', cursive;
-  background-color: #FCFBE3;
-  font-size: 16px;
-  min-height: 100vh; }
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  padding: 10px; }
 
-.link {
-  color: #b22222;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-  .link:hover {
-    color: #e88585;
-    text-decoration: none; }
+/*==========================
+Left page content
+==========================*/
+.pikabu-sidebar--left {
+  background-color: #ff7961;
+  text-align: center;
+  border: 1px solid black; }
+  .pikabu-sidebar--left ul {
+    padding: 100px 0px;
+    list-style: none; }
+    .pikabu-sidebar--left ul li {
+      padding: 20px; }
+      .pikabu-sidebar--left ul li a {
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        transition: all .2s; }
+        .pikabu-sidebar--left ul li a:hover {
+          color: firebrick; }
 
-.content {
-  width: 90%;
-  margin-top: auto;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center; }
-  .content .alan, .content .weather, .content .gary {
-    font-size: 20px; }
-
-@media screen and (min-width: 600px) {
-  .content {
-    max-width: 800px;
-    font-size: 30px; }
-    .content .alan, .content .weather, .content .gary {
-      font-size: 25px; }
-
-  .footer {
-    font-size: 20px; }
-
-  .logo h1 {
-    font-size: 100px; }
-  .logo h4 {
-    top: -75px;
-    left: -95px; }
-  .logo i {
-    top: 105px;
-    left: 104px; } }
+/*==========================
+Right page content
+==========================*/
+.pikabu-sidebar--right {
+  background-color: skyblue;
+  text-align: center;
+  border: 1px solid black; }
+  .pikabu-sidebar--right ul {
+    list-style: none;
+    padding: 100px 0px; }
+    .pikabu-sidebar--right ul li {
+      padding: 20px; }
+      .pikabu-sidebar--right ul li a {
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        transition: all .2s; }
+        .pikabu-sidebar--right ul li a:hover {
+          color: blue; }
 
 /*# sourceMappingURL=main.css.map */
