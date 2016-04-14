@@ -452,7 +452,7 @@ body {
 Center page content
 ==========================*/
 .pikabu-container {
-  background: #FCFBE3;
+  background: #fff;
   min-height: 100vh;
   max-width: 960px;
   position: relative;
