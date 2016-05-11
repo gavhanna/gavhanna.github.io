@@ -19,8 +19,15 @@ Center page content
   max-width: 960px;
   position: relative;
   margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header {
@@ -28,6 +35,7 @@ header {
   a.pikabu-nav-toggle {
     z-index: 10;
     padding: 10px;
+    -webkit-transition: all .2s;
     transition: all .2s;
     border-radius: 2px;
   }
@@ -57,7 +65,9 @@ header {
 
 .logo {
   font-family: "Poiret One", sans-serif;
-  align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
   margin: auto;
   width: 359px;
   position: relative;
@@ -106,6 +116,7 @@ Left page content
         font-size: 20px;
         text-decoration: none;
         color: black;
+        -webkit-transition: all .2s;
         transition: all .2s;
         &:hover {
           color: firebrick;
@@ -132,6 +143,7 @@ Right page content
         font-size: 20px;
         text-decoration: none;
         color: black;
+        -webkit-transition: all .2s;
         transition: all .2s;
         &:hover {
           color: blue;
