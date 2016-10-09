@@ -31,7 +31,6 @@ a
 .left-button, .right-button
   position: absolute
   top: 20px
-
   background: rgba(0,0,0,0)
   border: 2px solid #333
   transition: all .2s ease-in-out
@@ -67,10 +66,10 @@ a
   z-index: 100
 
 .left-sidebar.closed
-  transform: translateX(-2000px)
+  left: -2000px
 
 .right-sidebar.closed
-  transform: translateX(2000px)
+  right: -2000px
 
 .sidebar-wrapper
   width: 100%
@@ -79,25 +78,30 @@ a
   flex-direction: column
   justify-content: center
 
-  .close-left-sidebar
+  .close-sidebar
+    display: flex
+    flex-direction: column
+    justify-content: center
     position: absolute
     top: 20px
-    right: -50px
     background: none
-    border: 2px solid orange
     color: #333
-    padding: 0px 10px 5px 10px
+    padding: 5px
     font-size: 1.5rem
+    i
+      transition: all .2s ease-in-out
+    &:hover
+      i
+        transform: scale(1.2)
+        color: #000
+
+  .close-left-sidebar
+    right: -50px
+    border: 2px solid orange
 
   .close-right-sidebar
-    position: absolute
-    top: 20px
     left: -50px
-    background: none
     border: 2px solid skyblue
-    color: #333
-    padding: 0px 10px 5px 10px
-    font-size: 1.5rem
 
   .content
     width: 50%
@@ -110,3 +114,15 @@ a
         margin: 20px auto
         text-align: center
         position: relative
+
+
+.clickable-area
+  min-width: 100vw
+  min-height: 100vh
+  position: absolute
+  z-index: -100
+
+.high-z-index
+  background: rgba(255,255,255,.04)
+  z-index: 99
+  cursor: pointer

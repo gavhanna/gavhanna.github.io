@@ -3,7 +3,7 @@
 =animate-in()
   animation-name: name-slide-in
   animation-duration: .5s
-  animation-delay: .3s
+  animation-delay: 0s
   animation-timing-function: ease-in-out
   animation-fill-mode: forwards
 
@@ -31,7 +31,7 @@
     transform: translateX(-500px)
     opacity: 0
     +animate-in()
-    animation-delay: .6s
+    animation-delay: .25s
   img
     position: absolute
     right: 50px
@@ -40,7 +40,7 @@
     opacity: 0
     +animate-in()
     animation-name: lemon-slide-in
-    animation-delay: 1s
+    animation-delay: .5s
 
 @keyframes name-slide-in
   0%
