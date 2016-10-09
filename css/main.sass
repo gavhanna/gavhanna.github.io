@@ -1,0 +1,112 @@
+@import "_normalize.min"
+@import "_logo"
+
+body
+  display: flex
+  justify-content: center
+  flex-direction: column
+  font-family: "Josefin Sans"
+  min-height: 100vh
+  min-width: 100vw
+a
+  text-decoration: none
+  color: #333
+  transition: all .2s ease-in-out
+  &:hover
+    color: #000
+
+.hide
+  transform: translateY(-100px)
+
+#wrapper
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: 100vh
+  width: 100vw
+  max-width: 800px
+  margin: 0 auto
+  position: relative
+
+.left-button, .right-button
+  position: absolute
+  top: 20px
+
+  background: rgba(0,0,0,0)
+  border: 2px solid #333
+  transition: all .2s ease-in-out
+  padding: 5px
+  &:focus
+    outline: none
+
+.right-button
+  right: 20px
+  &:hover
+    border: 2px solid skyblue
+    color: skyblue
+
+.left-button
+  left: 20px
+  &:hover
+    border: 2px solid orange
+    color: orange
+
+.left-sidebar, .right-sidebar
+  transition: all .4s ease-in-out
+  min-width: 80vw
+  min-height: 100vh
+  position: fixed
+
+.left-sidebar.open
+  background-color: orange
+  left: 0px
+  z-index: 100
+.right-sidebar.open
+  background-color: skyblue
+  right: 0px
+  z-index: 100
+
+.left-sidebar.closed
+  transform: translateX(-2000px)
+
+.right-sidebar.closed
+  transform: translateX(2000px)
+
+.sidebar-wrapper
+  width: 100%
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  .close-left-sidebar
+    position: absolute
+    top: 20px
+    right: -50px
+    background: none
+    border: 2px solid orange
+    color: #333
+    padding: 0px 10px 5px 10px
+    font-size: 1.5rem
+
+  .close-right-sidebar
+    position: absolute
+    top: 20px
+    left: -50px
+    background: none
+    border: 2px solid skyblue
+    color: #333
+    padding: 0px 10px 5px 10px
+    font-size: 1.5rem
+
+  .content
+    width: 50%
+    margin: 0 auto
+    ul
+      padding: 0
+      list-style-type: none
+      li
+        font-size: 1.5rem
+        margin: 20px auto
+        text-align: center
+        position: relative

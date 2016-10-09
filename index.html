@@ -1,85 +1,71 @@
 <!doctype html>
-<html class="no-js">
-<head>
-  <title>Gav Hanna | Web Dev</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="icon" href="/favicon.ico">
-  <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="src/css/main.css">
-  <script type="text/javascript">
-    // Scroll the page past URL bar if user did not scroll manually, and
-    // hash is either absent or is a mobify properties override.
-    window.onload=function(){setTimeout(function(){if(!window.pageYOffset){window.scrollTo(0, 1);window.scrollTo(0, 0);}},250);};
-  </script>
-</head>
-<body>
-  <!-- the viewport -->
-  <div class="pikabu-viewport">
-  <!-- the left sidebar -->
-    <div class="pikabu-sidebar pikabu-sidebar--left">
-    <!-- left sidebar content -->
-    <h1>Websites</h1>
-    <ul>
-      <li><a href="http://www.alanjamesburns.com/">Alan James Burns | Artist</a></li>
-      <li><a href="http://gavhanna.github.io/gary-site/">Gary Teeling | Photographer</a></li>
-      <li><a href="http://gavhanna.github.io/artist/">Artist Template</a></li>
-    </ul>
-    </div>
-    <!-- the main page content -->
-    <div class="pikabu-container">
-      <!-- Overlay is needed to have a big click area to close the sidebars -->
-      <div class="pikabu-overlay"></div> <!--Do not remove -->
-      <header>
-        <a class="pikabu-nav-toggle left" data-role="left">Websites</a>
-        <a class="pikabu-nav-toggle right" data-role="right">Web Apps</a>
-      </header>
+<html class="no-js" lang="">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Open+Sans:400,800" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.min.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="wrapper">
+      <button class="left-button">
+        Web Sites
+      </button>
+      <div class="left-sidebar closed">
+        <div class="sidebar-wrapper">
+          <button class="close-left-sidebar close-sidebar"><</button>
+          <div class="content">
+            <ul>
+              <li><a href="http://www.alanjamesburns.com">Alan James Burns</a></li>
+              <li><a href="http://gavhanna.github.io/gary-site/">Gary Teeling</a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="right-button">
+        Web Apps
+      </button>
+      <div class="right-sidebar closed">
+        <div class="sidebar-wrapper">
+          <button class="close-right-sidebar close-sidebar">></button>
+          <div class="content">
+            <ul>
+              <li><a href="http://www.alanjamesburns.com">Poops</a></li>
+              <li><a href="http://gavhanna.github.io/gary-site/">Skedoops</a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="logo">
-        <i class="fa fa-lemon-o"></i>
+        <img src="lemon-logo.svg" alt="">
         <h1>gavhanna</h1>
-        <h4>Wub Deverroper</h4>
-      </div>
-      <div class="footer">
-        &copy; Gav Hanna 2016 <a class="link" href="mailto:gavhanna@gmail.com">(gavhanna@gmail.com)</a>
+        <h3>Web Developer</h3>
       </div>
     </div>
 
-    <!-- the right sidebar -->
-    <div class="pikabu-sidebar pikabu-sidebar--right">
-      <!-- right sidebar content -->
-      <h2>Web Apps</h2>
-      <ul>
-        <li><a href="https://gavhanna.github.io/weather-app/">Weather Forecast</a></li>
-        <li><a href="http://gavhanna.github.io/wiki-viewer/">Wiki Viewer</a></li>
-        <li><a href="http://gavhanna.github.io/twitch-app/">Twitch Viewer</a></li>
-        <li><a href="http://gavhanna.github.io/pomodoro-app/">Pomodoro Timer</a></li>
-      </ul>
-    </div>
-  </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-  <!-- include zepto.js or jquery.js -->
-  <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script> -->
-  <script src="libs/jquery/jquery.js"></script>
-  <!-- include pikabu.js -->
-  <script type="text/javascript" src="src/pikabu.js"></script>
-  <script>
-    $(function() {
-      pikabu = new Pikabu();
-      // Script to adjust element heights for demo
-      $('.m-heights-demo').on('click', 'a', function(e) {
-      var $link = $(this), target = $link.data('target');
-      e.preventDefault();
-      $('.is-active').removeClass('is-active');
-      $link.parents('li').addClass('is-active');
-      $('.m-dummy-height').remove();
-      target && $(target).append($('<div class="m-dummy-height">'));
-      pikabu.closeSidebars();
-    });
-  });
-  </script>
-</body>
+    <script src="js/main.js"></script>
+
+
+  </body>
 </html>
