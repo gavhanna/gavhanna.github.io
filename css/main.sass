@@ -34,6 +34,8 @@ nav
   position: absolute
   width: 100%
   top: 10px
+  @media (max-width: 400px)
+    justify-content: space-around
 
 
 .left-button, .right-button, .middle-button
@@ -88,7 +90,6 @@ nav
   z-index: 100
   @media (max-width: 400px)
     left: 0
-    right: 0
 
 .left-sidebar.closed
   left: -1000px
@@ -137,7 +138,7 @@ nav
     left: -50px
     border: 2px solid skyblue
     @media (max-width: 400px)
-      right: 20px
+      left: 80%
       border: 2px solid #999
 
   .close-middle-sidebar
