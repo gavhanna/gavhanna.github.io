@@ -1,6 +1,5 @@
 jQuery(function ($) {
 
-
   $(".left-button").on("click", function(){
     $(".left-button").toggleClass("hide");
     $(".right-button").toggleClass("hide");
