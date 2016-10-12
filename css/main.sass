@@ -39,11 +39,13 @@ nav
     justify-content: space-around
 
 
-.left-button, .right-button, .middle-button
+.btn
   background: rgba(0,0,0,0)
   border: 2px solid #999
+  border-radius: 20px
   transition: all .2s ease-in-out
-  padding: 5px
+  padding: 5px 10px
+
   &:focus
     outline: none
 
@@ -125,38 +127,71 @@ nav
     font-size: 1.5rem
     i
       transition: all .2s ease-in-out
+    &:focus
+      outline: none
     &:hover
       i
-        transform: scale(1.2)
+        transform: scale(1.5)
         color: #000
 
   .close-left-sidebar
     right: -50px
-    border: 2px solid orange
+    border: 2px solid transparent
+    box-shadow: inset 0px -2px 0px 0px orange
+    transition: all .4s ease-in-out
+    &:hover
+      box-shadow: inset 0px -50px 0px 0px orange
+      border-radius: 50%
     @media (max-width: 820px)
       left: 20px
-      border: 2px solid #999
+      border: 2px solid orange
+      box-shadow: inset 0px -2px 0px 0px #666
+      &:hover
+        border-radius: 50%
+        box-shadow: inset 0px -50px 0px 0px white
 
   .close-right-sidebar
     left: -50px
-    border: 2px solid skyblue
+    border: 2px solid transparent
+    box-shadow: inset 0px -2px 0px 0px skyblue
+    transition: all .4s ease-in-out
+    &:hover
+      border-radius: 50%
+      box-shadow: inset 0px -50px 0px 0px skyblue
     @media (max-width: 820px)
-      left: 80%
-      border: 2px solid #999
+      left: 90%
+      border: 2px solid skyblue
+      box-shadow: inset 0px -2px 0px 0px #666
+      &:hover
+        border-radius: 50%
+        box-shadow: inset 0px -50px 0px 0px white
 
   .close-middle-sidebar
     left: -50px
-    border: 2px solid salmon
+    border: 2px solid transparent
+    box-shadow: inset 0px -2px 0px 0px salmon
+    transition: all .4s ease-in-out
+    &:hover
+      border-radius: 50%
+      box-shadow: inset 0px -50px 0px 0px salmon
     @media (max-width: 820px)
       left: 20px
-      border: 2px solid #999
+      border: 2px solid salmon
+      box-shadow: inset 0px -2px 0px 0px #666
+      &:hover
+        border-radius: 50%
+        box-shadow: inset 0px -50px 0px 0px white
 
   .content
+    background: rgba(255,255,255,0.1)
+    border-radius: 20px
+    padding: 30px
     width: 50%
     margin: 0 auto
     text-align: center
     @media (max-width: 820px)
-      width: 100%
+      width: 90%
+      padding: 5px
     p
       font-size: 20px
       @media (max-width: 820px)
