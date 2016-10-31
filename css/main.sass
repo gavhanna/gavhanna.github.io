@@ -128,67 +128,54 @@ nav
     background: none
     color: #333
     padding: 5px
-    font-size: 1.5rem
+    border: 2px solid transparent
+    transition: all .4s ease-in-out
     i
+      font-size: 2rem
       transition: all .2s ease-in-out
     &:focus
       outline: none
     &:hover
+      border-radius: 50%
       i
         transform: scale(1.5)
         color: #000
+      @media (max-width: 820px)
+        box-shadow: inset 0px -2px 0px 0px #666
+        &:hover
+          box-shadow: inset 0px -50px 0px 0px rgba(255,255,255,0.3)
+
 
   .close-left-sidebar
     right: -50px
-    border: 2px solid transparent
     box-shadow: inset 0px -2px 0px 0px orange
-    transition: all .4s ease-in-out
     &:hover
       box-shadow: inset 0px -50px 0px 0px orange
-      border-radius: 50%
     @media (max-width: 820px)
       left: 20px
       border: 2px solid orange
-      box-shadow: inset 0px -2px 0px 0px #666
-      &:hover
-        border-radius: 50%
-        box-shadow: inset 0px -50px 0px 0px white
 
   .close-right-sidebar
     left: -50px
-    border: 2px solid transparent
     box-shadow: inset 0px -2px 0px 0px skyblue
-    transition: all .4s ease-in-out
     &:hover
-      border-radius: 50%
       box-shadow: inset 0px -50px 0px 0px skyblue
     @media (max-width: 820px)
       left: 90%
       border: 2px solid skyblue
-      box-shadow: inset 0px -2px 0px 0px #666
-      &:hover
-        border-radius: 50%
-        box-shadow: inset 0px -50px 0px 0px white
 
   .close-middle-sidebar
     left: -50px
-    border: 2px solid transparent
     box-shadow: inset 0px -2px 0px 0px salmon
-    transition: all .4s ease-in-out
     &:hover
-      border-radius: 50%
       box-shadow: inset 0px -50px 0px 0px salmon
     @media (max-width: 820px)
       left: 20px
       border: 2px solid salmon
-      box-shadow: inset 0px -2px 0px 0px #666
-      &:hover
-        border-radius: 50%
-        box-shadow: inset 0px -50px 0px 0px white
 
   .content
     background: rgba(255,255,255,0.1)
-    border-radius: 20px
+    border-radius: 5px
     padding: 30px
     width: 50%
     margin: 0 auto
@@ -209,7 +196,7 @@ nav
         font-size: 1.2rem
         margin: 20px auto
         position: relative
-        padding: 10px 0px
+        padding: 5px 0px
 
 
 .clickable-area
