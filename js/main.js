@@ -63,3 +63,5 @@ jQuery(function ($) {
   });
 
 });
+
+console.log("success");
