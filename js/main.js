@@ -1,68 +1,54 @@
-jQuery(function ($) {
+(function(){
+  const year = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+  const navButton = document.querySelector(".nav-button");
+  const nav = document.querySelector(".nav-links");
+  const navItems = document.querySelectorAll(".nav-item");
+  const navCloser = document.querySelector(".close-nav");
+  year.innerText = currentYear;
 
-  $(".left-button").on("click", function(){
-    $(".left-button").toggleClass("hide");
-    $(".right-button").toggleClass("hide");
-    $(".middle-button").toggleClass("hide");
-    $(".left-sidebar").toggleClass("open closed");
-    $(".clickable-area").addClass("high-z-index");
+  navButton.addEventListener("click", navControl);
+  navCloser.addEventListener("click", navControl);
+  navItems.forEach(el => {
+    el.addEventListener("click", navControl);
   });
 
-  $(".right-button").on("click", function(){
-    $(".left-button").toggleClass("hide");
-    $(".right-button").toggleClass("hide");
-    $(".middle-button").toggleClass("hide");
-    $(".right-sidebar").toggleClass("open closed");
-    $(".clickable-area").addClass("high-z-index");
-  });
-
-  $(".middle-button").on("click", function(){
-    $(".left-button").toggleClass("hide");
-    $(".right-button").toggleClass("hide");
-    $(".middle-button").toggleClass("hide");
-    $(".middle-sidebar").toggleClass("open closed");
-    $(".clickable-area").addClass("high-z-index");
-  });
-
-  $(".close-left-sidebar").on("click", function(){
-    $(".left-button").toggleClass("hide");
-    $(".right-button").toggleClass("hide");
-    $(".middle-button").toggleClass("hide");
-    $(".left-sidebar").toggleClass("open closed");
-    $(".clickable-area").removeClass("high-z-index");
-  });
-
-  $(".close-right-sidebar").on("click", function(){
-    $(".left-button").toggleClass("hide");
-    $(".right-button").toggleClass("hide");
-    $(".middle-button").toggleClass("hide");
-    $(".right-sidebar").toggleClass("open closed");
-    $(".clickable-area").removeClass("high-z-index");
-  });
-
-  $(".close-middle-sidebar").on("click", function(){
-    $(".left-button").toggleClass("hide");
-    $(".right-button").toggleClass("hide");
-    $(".middle-button").toggleClass("hide");
-    $(".middle-sidebar").toggleClass("open closed");
-    $(".clickable-area").removeClass("high-z-index");
-  });
+  function navControl() {
+    navCloser.classList.toggle("open");
+    nav.classList.toggle("nav-on");
+  }
 
 
-  $(".clickable-area").on("click", function(){
-    $(this).removeClass("high-z-index");
-    $(".left-button").toggleClass("hide");
-    $(".right-button").toggleClass("hide");
-    $(".middle-button").toggleClass("hide");
-    $(".left-sidebar").removeClass("open");
-    $(".left-sidebar").addClass("closed");
-    $(".right-sidebar").removeClass("open");
-    $(".right-sidebar").addClass("closed");
-    $(".middle-sidebar").removeClass("open");
-    $(".middle-sidebar").addClass("closed");
-  });
+  
 
+
+$('a[href*="#"]')
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {  
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top - 50
+      }, 1000, function() {
+        var $target = $(target);
+        $target.focus();
+        if ($target.is(":focus")) { // Checking if the target was focused
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          $target.focus(); // Set focus again
+        };
+      });
+    }
+  }
 });
 
-console.log("success");
-console.log("please work...!!");
+})();

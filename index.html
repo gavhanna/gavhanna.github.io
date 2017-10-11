@@ -1,95 +1,338 @@
 <!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="Portfolio site of Dublin based web developer Gav Hanna.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Icons -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/main.css">
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gav Hanna | Web Developer</title>
+        <meta name="description" content="Personal Portfolio of Dublin based Web Developer Gav Hanna.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-  </head>
-  <body>
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div id="wrapper">
-
-      <nav>
-        <button class="left-button btn">Web Sites</button>
-        <button class="middle-button btn">About</button>
-        <button class="right-button btn">Web Apps</button>
-      </nav>
-      <div class="logo">
-        <img src="lemon-logo.svg" alt="">
-        <h1>gavhanna</h1>
-        <h3>Web Developer</h3>
-      </div>
-      <div class="left-sidebar sidebar closed">
-        <div class="sidebar-wrapper">
-          <button class="close-left-sidebar close-sidebar"><i class="material-icons">keyboard_arrow_left</i></button>
-          <div class="content">
-            <h1>Websites</h1>
-            <p>
-              These are some of the static portoflio websites which I have either finished or I am still working on.
-            </p>
-            <br>
-            <ul>
-              <li><a href="http://www.alanjamesburns.com">Alan James Burns</a></li>
-              <li><a href="http://michellehall.ie">Michelle Hall</a></li>
-              <li><a href="http://gavhanna.github.io/gary-site/">Gary Teeling</a></li>
-              <li><a href="http://gavhanna.github.io/littlewolf/">Little Wolf</a></li>
-            </ul>
-          </div>
+        <link rel="apple-touch-icon" href="icon.png">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body id="body">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <div class="close-nav"></div>
+        <nav id="nav">
+            <div class="nav-button"></div>
+            <div class="nav-wrapper">
+                <div class="title">
+                    <span class="fancy-font"><a href="#body">GH</a></span>
+                </div>
+                <div class="nav-links">
+                    <span class="nav-item">
+                        <a href="#about">About</a>
+                    </span>
+                    <span class="nav-item">
+                        <a href="#education">Education</a>
+                    </span>
+                    <span class="nav-item">
+                        <a href="#projects">Projects</a>
+                    </span>
+                    <span class="nav-item">
+                        <a href="#contact">Contact</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <div id="wrapper">
+            <div id="hero">
+                <div id="name">Gav Hanna</div>
+                <span id="job-title">Web Developer</span>
+            </div>
+            <section class="content-block about" id="about">
+                <div class="top-block" id="about-title">
+                    <h3 class="fancy-font">About Me</h3>
+                </div>
+                <div class="bottom-block" id="about-content">
+                    <p>I am a self-taught web developer. Currently looking for a junior/intern position.
+                        I am a dedicated and driven self-learner, with a desire to constantly reach 
+                        towards mastering web development.
+                    </p>
+                </div>
+            </section>
+            <section class="content-block experience" id="experience">
+                <div class="experience-title left-block">
+                    <h3 class="fancy-font">Experience</h3>
+                </div>
+                <div class="right-block">
+                    <p>2016 - Present</p>
+                    <p>Freelance web developer. Creating and implementing 
+                        portfolio websites for Dublin based artists and photopraphers.
+                    </p>
+                </div>
+            </section>
+            <section class="content-block education" id="education">
+                <div class="left-block">
+                    <h3 class="fancy-font">Education</h3>
+                </div>
+                <div class="right-block">
+                    <p>2017</p>
+                    <p>Udemy<br>Complete Angular2 and Typescript Course.</p>
+                    <p>2016 - Present</p>
+                    <p>Free Code Camp<br>Obtained Front End Developer Certificate.</p>
+                    <p>2015 - 2016</p>
+                    <p>IBAT College Dublin<br>Introduction to Programming in Java.<br>Passed with distinction.</p>
+                    <p>2013 - 2014</p>
+                    <p>UCD<br>Access to Science and Engineering.</p>
+                </div>
+            </section>
+            <section class="content-block projects" id="projects">
+                <div class="top-block" id="about-title">
+                    <h3 class="fancy-font">Projects</h3>
+                </div>
+                <div class="bottom-block" id="projects-content">
+                    <div class="project">
+                        <h4>Angular Recipe App</h4>
+                        <div class="links">
+                            <span class="project-link"><a target="_blank" href="http://ng-retsept.s3-website-eu-west-1.amazonaws.com/">Live App</a></span>
+                            <span class="project-link"><a target="_blank" href="https://github.com/gavhanna/angular-recipe-app">Github Link</a></span>
+                        </div>
+                        <p>A recipe book webapp built in Angular (as opposed to AngularJS).</p>
+                        <p>
+                            It allows users to view recipes and add items to a shopping list.
+                            Users can sign up to add recipes or edit existing recipes.
+                                
+                        </p>    
+                            It uses nested components that interact with each other via services and rxjs observables.
+                            The app itself is hosted on Amazon Web Services.
+                            Firebase is used as the project's backend.
+                        </p>
+                        <div class="tech-used">
+                            <span>
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-amazonwebservices-original"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-angularjs-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-typescript-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-git-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-sass-original"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-ubuntu-plain"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-block" id="projects-content">
+                    <div class="project">
+                        <h4>Pomodoro Timer App</h4>
+                        <div class="links">
+                            <span class="project-link"><a target="_blank" href="https://gavhanna.github.io/pomodoro-timer/">Live App</a></span>
+                            <span class="project-link"><a target="_blank" href="https://github.com/gavhanna/pomodoro-timer">Github Link</a></span>
+                        </div>
+                        <p>A Pomodoro Timer App built in vanilla JS.</p>
+                        <p>
+                            It allows users to set an amount of time to work and to take a break.
+                            Can be paused during a break or work session.
+                            Plays a small notification when a session is over and another begins.    
+                        </p>    
+                            This app was built as part of the Free Code Camp's front end projects.
+                            It is hoted on github pages and was built using vanilla JS and CSS.
+                        </p>
+                        <div class="tech-used">
+                            <span>
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-git-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-css3-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-ubuntu-plain"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-block" id="projects-content">
+                    <div class="project">
+                        <h4>Simon Game</h4>
+                        <div class="links">
+                            <span class="project-link"><a target="_blank" href="https://gavhanna.github.io/simon-game/">Live App</a></span>
+                            <span class="project-link"><a target="_blank" href="https://github.com/gavhanna/simon-game">Github Link</a></span>
+                        </div>
+                        <p>A Simon Game App built in vanilla JS.</p>
+                        <p>
+                            It plays an incrementing number of coloured lights, accompanied by tones.
+                            The user has to remember and input the same sequence. If the user fails, the sequence is repeated.
+                            If playing on "strict mode", the game resets on a failed attempt.
+                            The game ends after 20 rounds.    
+                        </p>    
+                            This app was built as part of the Free Code Camp's front end projects.
+                            It is hoted on github pages and was built using vanilla JS and CSS.
+                        </p>
+                        <div class="tech-used">
+                            <span>
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-git-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-css3-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-ubuntu-plain"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-block" id="projects-content">
+                    <div class="project">
+                        <h4>Tic Tac Toe Game</h4>
+                        <div class="links">
+                            <span class="project-link"><a target="_blank" href="https://gavhanna.github.io/xoxo/my-attempt/">Live App</a></span>
+                            <span class="project-link"><a target="_blank" href="https://github.com/gavhanna/xoxo/tree/master/my-attempt">Github Link</a></span>
+                        </div>
+                        <p>A Tic Tac Toe Game App built in vanilla JS.</p>
+                        <p>
+                            Allows the user to play X's and O's against the computer.    
+                        </p>    
+                            This app was built as part of the Free Code Camp's front end projects.
+                            It is hoted on github pages and was built using vanilla JS and CSS.
+                            It implements a minimax algorithm in order to decide the best course of action for the computer player.
+                        </p>
+                        <div class="tech-used">
+                            <span>
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-git-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-css3-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-ubuntu-plain"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-block" id="projects-content">
+                    <div class="project">
+                        <h4>ISS Tracker</h4>
+                        <div class="links">
+                            <span class="project-link"><a target="_blank" href="https://gavhanna.github.io/iss-tracker/">Live App</a></span>
+                            <span class="project-link"><a target="_blank" href="https://github.com/gavhanna/iss-tracker/tree/gh-pages">Github Link</a></span>
+                        </div>
+                        <p>An app that allows users to track the position of the Internation Space Station.</p>
+                        <p>
+                            Users can click on a menu button for some extra information, current velocity, altiture and visibility.
+                            The green circle indicates the best view of the ISS as it passes.  
+                        </p>    
+                            This app was built in a few hours one Saturday for fun. It uses Google Maps API and wheretheiss developer API. It uses jQuery to implement the AJAX requests.
+                        </p>
+                        <div class="tech-used">
+                            <span>
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-git-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-css3-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-jquery-plain-wordmark"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-ubuntu-plain"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-block" id="projects-content">
+                    <div class="project">
+                        <h4>Artist Portfolio Websites</h4>
+                        <p>A collection of websites made to the specifications of local Dublin based artists.</p>
+                        <p><a target="_blank" href="https://alanjamesburns.com">AlanJames Burns | Artist</a></p>
+                        <p><a target="_blank" href="http://littlewolf.ie">Little Wolf | Media</a></p>
+                        <p><a target="_blank" href="http://michellehall.ie">Michelle Hall | Artist</a></p>
+                        <p><a target="_blank" href="http://garyteeling.ie">Gary Teeling | Photographer</a></p>
+                        <p><a target="_blank" href="http://patriciamckenna.ie">Patricia McKenna | Artist</a></p>
+                        <div class="tech-used">
+                            <span>
+                                <i class="devicon-javascript-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-html5-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-gulp-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-sass-original"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-git-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-css3-plain"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-jquery-plain-wordmark"></i>
+                            </span>
+                            <span>
+                                <i class="devicon-ubuntu-plain"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-block contact" id="contact">
+                <div class="bottom-block" id="about-title">
+                    <h3 class="fancy-font">Contact</h3>
+                </div>
+                <div class="bottom-block contact-list">
+                    <a target="_blank" href="mailto:gavhanna@gmail.com">Email</a>
+                    <a target="_blank" href="https://github.com/gavhanna">Github</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/gavhanna">LinkedIn</a>
+                </div>
+            </section>
         </div>
-      </div>
-      <div class="middle-sidebar sidebar closed">
-        <div class="sidebar-wrapper">
-          <button class="close-middle-sidebar close-sidebar"><i class="material-icons">keyboard_arrow_up</i></button>
-          <div class="content">
-            <h2>Hi, I'm Gav!</h2>
-            <p>I currently build static websites, mostly in the form of portfolio websites, and simple webapps. I'm self taught and constantly improving my skills.</p>
-            <br>
-            <h3>Gimme a shout</h3>
-            <span><a href="mailto:gavhanna@gmail.com">gavhanna@gmail.com</a></span>
-          </div>
-        </div>
-      </div>
-      <div class="right-sidebar  sidebar closed">
-        <div class="sidebar-wrapper">
-          <button class="close-right-sidebar close-sidebar"><i class="material-icons">keyboard_arrow_right</i></button>
-          <div class="content">
-            <h1>Web Apps</h1>
-            <p>
-              Some simple web-apps I've built using HTML5, CSS3 (Sass), JS (mostly jQuery).
-            </p>
-            <br>
-            <ul>
-              <li><a href="https://gavhanna.github.io/weather-app/">Weather App</a></li>
-              <li><a href="http://gavhanna.github.io/wiki-viewer/">Wiki Viewer</a></li>
-              <li><a href="http://gavhanna.github.io/twitch-app/">Twitch Viewer</a></li>
-              <li><a href="http://gavhanna.github.io/pomodoro-app/">Popmodoro Timer</a></li>
-              <li><a href="http://gavhanna.github.io/reaction/">Reaction Timer</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="clickable-area"></div>
+        <footer id="footer">&copy;Gav Hanna <span id="year"></span></footer>
+       
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
 
-
-    </div>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
-  </body>
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
 </html>
