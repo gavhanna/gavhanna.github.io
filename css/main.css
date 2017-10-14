@@ -55,13 +55,17 @@ nav {
 
 .nav-button {
   background: orange;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   position: fixed;
-  top: 15px;
+  top: 12px;
   right: 20px;
   display: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .2s ease-in-out; }
+  .nav-button.clicked {
+    transform: rotate(180deg);
+    border-radius: 50%; }
 
 .nav-wrapper {
   padding: 10px 0px;

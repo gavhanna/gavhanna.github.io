@@ -14,6 +14,7 @@
   });
 
   function navControl() {
+    navButton.classList.toggle("clicked")
     navCloser.classList.toggle("open");
     nav.classList.toggle("nav-on");
   }
