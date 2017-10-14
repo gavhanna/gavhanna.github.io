@@ -6,7 +6,8 @@
         <title>Gav Hanna | Web Developer</title>
         <meta name="description" content="Personal Portfolio of Dublin based Web Developer Gav Hanna.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <!-- FontAwesome -->
+        <script src="https://use.fontawesome.com/712f80daf2.js"></script>
         <link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="css/normalize.css">
@@ -40,10 +41,18 @@
             </div>
         </nav>
         <div id="wrapper">
-            <div id="hero">
-                <div id="name">Gav Hanna</div>
-                <span id="job-title">Web Developer</span>
-            </div>
+            <section id="hero">
+                <div class="centered">
+                    <div id="name">Gav Hanna</div>
+                    <span id="job-title">Web Developer</span>
+                </div>
+                <div class="continue-button">
+                    <a href="#about">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </section>
+            <hr>
             <section class="content-block about" id="about">
                 <div class="top-block" id="about-title">
                     <h3 class="fancy-font">About Me</h3>
@@ -55,6 +64,7 @@
                     </p>
                 </div>
             </section>
+            <hr>
             <section class="content-block experience" id="experience">
                 <div class="experience-title left-block">
                     <h3 class="fancy-font">Experience</h3>
@@ -66,21 +76,23 @@
                     </p>
                 </div>
             </section>
+            <hr>
             <section class="content-block education" id="education">
                 <div class="left-block">
                     <h3 class="fancy-font">Education</h3>
                 </div>
                 <div class="right-block">
                     <p>2017</p>
-                    <p>Udemy<br>Complete Angular2 and Typescript Course.</p>
+                    <p><em>Udemy</em><br>Complete Angular2 and Typescript Course.</p>
                     <p>2016 - Present</p>
-                    <p>Free Code Camp<br>Obtained Front End Developer Certificate.</p>
+                    <p><em>Free Code Camp</em><br>Obtained Front End Developer Certificate.</p>
                     <p>2015 - 2016</p>
-                    <p>IBAT College Dublin<br>Introduction to Programming in Java.<br>Passed with distinction.</p>
+                    <p><em>IBAT College Dublin</em><br>Introduction to Programming in Java.<br>Passed with distinction.</p>
                     <p>2013 - 2014</p>
-                    <p>UCD<br>Access to Science and Engineering.</p>
+                    <p><em>UCD</em><br>Access to Science and Engineering.</p>
                 </div>
             </section>
+            <hr>
             <section class="content-block projects" id="projects">
                 <div class="top-block" id="about-title">
                     <h3 class="fancy-font">Projects</h3>
@@ -309,6 +321,7 @@
                     </div>
                 </div>
             </section>
+            <hr>
             <section class="content-block contact" id="contact">
                 <div class="bottom-block" id="about-title">
                     <h3 class="fancy-font">Contact</h3>
@@ -319,6 +332,7 @@
                     <a target="_blank" href="https://www.linkedin.com/in/gavhanna">LinkedIn</a>
                 </div>
             </section>
+            <hr>
         </div>
         <footer id="footer">&copy;Gav Hanna <span id="year"></span></footer>
        

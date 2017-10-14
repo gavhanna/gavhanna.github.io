@@ -6,7 +6,14 @@ body {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
   font-size: 1.4rem;
-  color: #333; }
+  color: #333;
+  overflow-x: hidden; }
+
+hr {
+  width: 50%;
+  border-top: 10px;
+  border-color: orange;
+  background-image: linear-gradient(left, #f0f0f0, #8c8c8c, #f0f0f0); }
 
 i {
   color: #666; }
@@ -57,7 +64,7 @@ nav {
   cursor: pointer; }
 
 .nav-wrapper {
-  padding: 10px;
+  padding: 10px 0px;
   width: 90vw;
   max-width: 900px;
   margin: 0 auto;
@@ -77,16 +84,36 @@ nav {
 
 .links a {
   padding-right: 10px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  transition: all .2s ease-in-out; }
 
 #wrapper {
-  margin: 200px auto;
+  margin: 0 auto;
   width: 90vw;
   max-width: 900px; }
 
 #hero {
+  position: relative;
   text-align: center;
-  margin: 100px 0 150px 0; }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.continue-button {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  font-size: 4rem; }
+  .continue-button > i {
+    cursor: pointer;
+    color: #999;
+    transition: all .2s ease-in-out; }
+    .continue-button > i:hover {
+      color: orange; }
+  .continue-button a {
+    box-shadow: none; }
 
 #name {
   position: relative;
@@ -119,6 +146,9 @@ nav {
   margin: 0 auto;
   flex-direction: column; }
 
+.contact {
+  margin-bottom: 50px; }
+
 .right-block {
   width: 70%; }
 
@@ -142,12 +172,13 @@ nav {
     font-size: 2rem; }
 
 .contact-list > a {
-  margin: 20px; }
+  margin: 20px;
+  transition: all .2s ease-in-out; }
 
 footer {
   width: 100vw;
   text-align: center;
-  margin-bottom: 100px; }
+  margin: 100px 0; }
 
 .close-nav {
   display: none;
