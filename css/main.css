@@ -109,7 +109,10 @@ nav {
   bottom: 5%;
   left: 0;
   right: 0;
-  font-size: 4rem; }
+  font-size: 4rem;
+  animation-name: wobble;
+  animation-duration: 1s;
+  animation-delay: 2s; }
   .continue-button > i {
     cursor: pointer;
     color: #999;
@@ -119,6 +122,23 @@ nav {
   .continue-button a {
     box-shadow: none; }
 
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg); }
+  49% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(10deg); }
+  60% {
+    transform: rotate(-10deg); }
+  70% {
+    transform: rotate(10deg); }
+  80% {
+    transform: rotate(-10deg); }
+  90% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(0deg); } }
 #name {
   position: relative;
   font-size: 3rem; }
@@ -348,6 +368,9 @@ footer {
     flex-direction: column; }
 
   body {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+
+  .continue-button {
+    bottom: 10%; } }
 
 /*# sourceMappingURL=main.css.map */
