@@ -155,22 +155,110 @@ nav {
     font-size: 3rem;
    &:before{
         content: "";
+        opacity: 0.5;
         position: absolute;
-        width: 40%;
-        height: 1px;
-        bottom: 0;
-        left: 30%;
+        width: 300px;
+        height: 300px;
+        left: 50%;
+        z-index: -1;
+        margin-left: -155px;
+        bottom: -130px;
+        border-radius: 50%;
+        background: orange;
         border-bottom: 2px solid orange;
+        animation-name: intro-animation;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+        animation-duration: 0.5s;
+    }
+}
+
+@keyframes intro-animation {
+    0% {
+        opacity: 0;
+        margin-left: -50px;
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        bottom: -40px;
+        border-radius: 50%;
+        background: orange;
+        border-bottom: 2px solid orange;
+    }
+    30% {
+        opacity: 1;
+        width: 1px;
+        height: 1px;
+        left: 10%;
+        bottom: 0px;
+        background: orange;
+        border-radius: 0;
+        border-bottom: 2px solid orange;
+    }
+    60% {
+        opacity: 1;
+        width: 1px;
+        height: 1px;
+        left: 10%;
+        bottom: 0px;
+        background: orange;
+        border-radius: 0;
+        border-bottom: 2px solid orange;
+    }
+    85% {
+        margin-left: 0px;
+        opacity: 1;
+        width: 40%;
+        left: 40%;
+        height: 1px;
+        border-radius: 0;
+        bottom: 0px;
+    }
+    92% {
+        margin-left: 0px;
+        opacity: 1;
+        width: 40%;
+        left: 25%;
+        height: 1px;
+        border-radius: 0;
+        bottom: 0px;
+    }
+    100% {
+        margin-left: 0px;
+        opacity: 1;
+        width: 40%;
+        left: 30%;
+        height: 1px;
+        border-radius: 0;
+        bottom: 0px;
     }
 }
 
 .content-block {
-    margin: 70px 0px 0px 20px;
+    margin: 70px 0px 70px 70px;
     padding: 10px;
 }
 
 #job-title {
     font-size: 1rem;
+    opacity: 0;
+    transform: translateY(-150px);
+    animation-name: title-drop;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes title-drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .content-block {
@@ -217,8 +305,22 @@ nav {
     margin: 50px auto;
     display: flex;
     justify-content: space-around;
-    > span i {
-        font-size: 2rem;
+}
+
+.devicon {
+    font-size: 2rem;
+    opacity: 0;
+    transform: scale(0.5) translateX(-150px);
+    transition: all .2s ease-in-out;
+    &.in-view {
+        opacity: 1;
+        transform: scale(1) translateX(0px);
+    }
+}
+
+@for $i from 0 to 10 {
+    .devicon:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.05s};
     }
 }
 
@@ -280,3 +382,5 @@ footer {
         }
     }
 }
+
+
