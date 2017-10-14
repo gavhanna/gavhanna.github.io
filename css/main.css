@@ -322,6 +322,8 @@ footer {
     top: 0;
     transition: all .1s ease-in-out;
     z-index: 100; }
+    .nav-links .nav-item > a {
+      box-shadow: inset 0 -2px 0 0 orange; }
 
   .nav-on {
     right: 20px;
@@ -333,8 +335,19 @@ footer {
 
   .content-block {
     flex-direction: column;
+    margin: 70px 0;
     text-align: center; }
     .content-block .left-block, .content-block .right-block {
-      width: 100%; } }
+      width: 100%; }
+
+  .devicon {
+    font-size: 1.5rem; }
+
+  .contact-list {
+    display: flex;
+    flex-direction: column; }
+
+  body {
+    font-size: 1.2rem; } }
 
 /*# sourceMappingURL=main.css.map */
