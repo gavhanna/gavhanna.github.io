@@ -292,9 +292,6 @@ nav {
     display: flex;
 }
 
-.left-block {
-    width: 30%;
-}
 
 
 .about, .projects, .contact {
@@ -308,8 +305,12 @@ nav {
     margin-bottom: 50px;
 }
 
+.left-block {
+    width: 30%;
+}
 .right-block {
     width: 70%;
+    margin-top: 8px;
 }
 
 .links {
