@@ -67,7 +67,6 @@
        if (isScrolledIntoView(this) === true) {
            $(this).addClass('in-view');
            console.log($(this), "is now in view");
-           
        }
     });
   });
