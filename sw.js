@@ -17,7 +17,7 @@ self.addEventListener('install', function(event) {
     'css/main.css',
     'js/main.js',
     'https://fonts.googleapis.com/css?family=Raleway|Satisfy',
-    // Simon Game
+    // Simon Game: currently not working
     'https://gavhanna.github.io/simon-game/index.html',
     'https://gavhanna.github.io/simon-game/js/app.js',
     'https://gavhanna.github.io/simon-game/css/main.css',
