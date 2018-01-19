@@ -8,7 +8,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-let staticCacheName = 'static-files-v2';
+let staticCacheName = 'static-files-v3';
 
 self.addEventListener('install', function(event) {
   
